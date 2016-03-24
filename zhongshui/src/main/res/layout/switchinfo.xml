@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	 >  
+ <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:orientation="horizontal"
+        android:background="@color/bg_action"    
+        android:gravity="center">
+        <ImageView
+	        android:id="@+id/img_back"
+	        android:layout_width="wrap_content"
+	        android:layout_height="50dip"
+	        android:paddingTop="0dip"
+	        android:paddingBottom="0dip"
+	        android:layout_gravity="center"
+	        android:scaleType="fitCenter"
+	        android:paddingLeft="10dip"
+	        android:src="@drawable/ic_back_normal"
+	        />
+	    <TextView
+	        android:id="@+id/tx_title"
+	        android:layout_width="0dip"
+	        android:layout_weight="1"
+	        android:layout_height="50dip"
+	        android:gravity="center"
+	        android:textSize="24sp"      
+	        android:text="在线参数"        
+	        android:textColor="@color/white"
+	        android:singleLine="true"
+	        android:ellipsize="end"/>	        
+	    
+    </LinearLayout>
+<android.support.v4.widget.SwipeRefreshLayout 
+    android:id="@+id/swipe_container"      
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent" >  
+<views.ObservableScrollView 
+    android:layout_width="fill_parent"
+	android:layout_height="fill_parent"    
+	android:id="@+id/scrollView"   
+	android:scrollbars="none"    
+	>    
+<LinearLayout 
+    android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:background="@color/bg_color" >  
+    
+   <!--     第一行仪表 -->
+	   <LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_marginTop="20dip"
+	     android:showDividers="end"  
+	      
+	    >
+	    <!-- 第一个仪表 -->
+	   
+	    <RelativeLayout  
+		    android:layout_width="0dip"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"	   	    
+		    android:gravity="center"		   
+		    android:layout_weight="1">
+		<!--     左1仪表盘 -->
+	    <ImageView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:scaleType="center"
+	        android:id="@+id/img1"	       
+	        android:src="@drawable/dashboard_u" />
+		
+		<ImageView
+		    android:id="@+id/img2"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:scaleType="center"
+		    android:src="@drawable/signsec_pointer_01" />
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@id/img1"
+		    android:layout_marginTop="10dip"
+		    android:orientation="horizontal"
+		    android:gravity="center"
+		    >
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="电压："			    	    		    
+			    android:textColor="@color/grey" 			    
+		        android:textSize="19sp" 
+		        android:gravity="center"		        
+		        />
+			<views.RiseNumberTextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:id="@+id/tx1"		    
+			    android:text="0"		   			   
+		        android:textColor="@color/purple" 
+		        android:textSize="24sp" 
+		        android:gravity="center"
+			    />
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="  V"
+			    android:layout_below="@id/img1"			    		    
+			    android:textColor="@color/grey" 			    
+		        android:textSize="19sp" 
+		        android:gravity="center"		      
+		        />
+		</LinearLayout>
+		</RelativeLayout>
+		 <!--  第一个仪表结束 -->
+	       
+	    
+	    <!-- 第二个仪表 -->
+	    
+	    <RelativeLayout  
+		    android:layout_width="0dip"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"		
+		    android:gravity="center"		   
+		    android:layout_weight="1">
+		<!--  右1仪表盘 -->
+	    <ImageView
+	        android:id="@+id/img3"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"	     
+	        android:scaleType="center"	               
+	        android:src="@drawable/dashboard_i" />	
+	    <ImageView
+	        android:id="@+id/img4"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"	        	
+	        android:scaleType="center"
+	        android:src="@drawable/signsec_pointer_01" />
+	     <LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@id/img3"
+		    android:layout_marginTop="10dip"
+		    android:orientation="horizontal"
+		    android:gravity="center"
+		    >
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="电流："			   	    		    
+			    android:textColor="@color/grey" 			    
+		        android:textSize="19sp" 
+		        android:gravity="center"		       
+		        />
+			<views.RiseNumberTextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:id="@+id/tx2"		    
+			    android:text="0"		   			   
+		        android:textColor="@color/purple" 
+		        android:textSize="24sp" 
+		        android:gravity="center"
+			    />
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="  A"
+			    android:layout_below="@id/img1"			    		    
+			    android:textColor="@color/grey" 			    
+		        android:textSize="19sp" 
+		        android:gravity="center"		       
+		        />
+		</LinearLayout>
+		</RelativeLayout><!--  第二个仪表结束 -->
+	    
+	     <!-- 第一行仪表结束 -->
+	 </LinearLayout>  
+     <!--  <TextView
+		    android:layout_width="fill_parent"
+		    android:layout_marginTop="5dip"
+		    android:layout_marginLeft="30dip"
+		    android:layout_marginRight="30dip"
+		    android:layout_marginBottom="30dip"		   
+		    android:padding="30dip"
+		    android:background="@drawable/para_bg"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/tx"
+		    android:gravity="center|left"
+		    android:paddingLeft="15dip"
+		    android:paddingRight="15dip"		       
+		    android:text="0A"
+		    android:lineSpacingMultiplier="1.5"
+		    android:textColor="@color/white"
+		    android:textSize="18sp"
+		    /> -->
+  <!--    参数查看及配置部分 -->
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:layout_marginLeft="0dip"
+	    >
+	  <!--   最大电流 -->
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_marginTop="5dip"
+	        android:layout_marginLeft="15dip"
+	        android:layout_marginRight="15dip"
+	        android:gravity="center|left"
+	        >
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="最大电流："
+	            android:textSize="18sp"/>
+	        <EditText
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:hint="0"
+	             android:paddingLeft="5dip"
+	            android:paddingRight="10dip"
+	            android:id="@+id/et_maxi"
+	            android:background="@color/bg_color"
+	            android:textColor="@color/blue"
+	            android:textSize="23sp"
+	            />
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="A"
+	            android:textSize="18sp"/>
+	    </LinearLayout>
+	    <!--   欠压和过压 -->
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_marginTop="15dip"
+	        android:layout_marginLeft="15dip"
+	        android:layout_marginRight="15dip"
+	        android:gravity="center|left"
+	        >
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="欠压："
+	            android:textSize="18sp"/>
+	        <EditText
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:hint="0"
+	            android:id="@+id/et_uv"
+	             android:paddingLeft="5dip"
+	            android:paddingRight="10dip"
+	            android:background="@color/bg_color"
+	            android:textColor="@color/blue"
+	            android:textSize="23sp"
+	            />
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="V"
+	            android:textSize="18sp"/>
+	        <View
+	            android:layout_weight="1"
+	            android:layout_width="0dip"
+	            android:layout_height="0dip"
+	            />
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="过压："
+	            android:textSize="18sp"/>
+	        <EditText
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:hint="0"
+	            android:id="@+id/et_ov"
+	             android:paddingLeft="5dip"
+	            android:paddingRight="10dip"
+	            android:background="@color/bg_color"
+	            android:textColor="@color/blue"
+	            android:textSize="23sp"
+	            />
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="V"
+	            android:textSize="18sp"/>
+	        <View
+	            android:layout_weight="1"
+	            android:layout_width="0dip"
+	            android:layout_height="0dip"
+	            />
+	    </LinearLayout>
+	    
+	     <!--   电压系数和电流系数 -->
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_marginTop="15dip"
+	        android:layout_marginLeft="15dip"
+	        android:layout_marginRight="15dip"
+	        android:gravity="center|left"
+	        >
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="电压系数："
+	            android:textSize="18sp"/>
+	        <EditText
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:hint="0"
+	             android:paddingLeft="5dip"
+	            android:paddingRight="10dip"
+	            android:id="@+id/et_urate"
+	            android:background="@color/bg_color"
+	            android:textColor="@color/blue"
+	            android:textSize="23sp"
+	            />
+	       
+	        <View
+	            android:layout_weight="1"
+	            android:layout_width="0dip"
+	            android:layout_height="0dip"
+	            />
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="电流系数："
+	            android:textSize="18sp"/>
+	        <EditText
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:hint="0"
+	            android:paddingLeft="5dip"
+	            android:paddingRight="10dip"
+	            android:id="@+id/et_irate"
+	            android:background="@color/bg_color"
+	            android:textColor="@color/blue"
+	            android:textSize="23sp"
+	            />	        
+	        <View
+	            android:layout_weight="1"
+	            android:layout_width="0dip"
+	            android:layout_height="0dip"
+	            />
+	    </LinearLayout>
+	</LinearLayout>
+	<Button 
+         android:layout_width="fill_parent"
+         android:layout_height="45dip"
+         android:id="@+id/bt"
+         android:text="更改配置"
+         android:layout_marginTop="35dip"
+         android:textColor="@color/white"
+         android:background="@color/royalblue"
+         android:textSize="23sp"
+         />
+</LinearLayout>
+</views.ObservableScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

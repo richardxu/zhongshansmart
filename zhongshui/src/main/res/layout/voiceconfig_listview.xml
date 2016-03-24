@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="50dip">
+    <TextView
+        android:id="@+id/tx_channel"
+        android:layout_width="0dip"
+        android:layout_weight="1"
+        android:layout_height="50dip"
+        android:gravity="center|left"
+        android:layout_marginLeft="15dip"
+        android:text="通道1"
+        android:textSize="16sp"
+        android:textColor="@color/gray"
+        />
+    <TextView
+        android:id="@+id/tx_name"
+        android:layout_width="0dip"
+        android:layout_weight="1"
+        android:layout_height="50dip"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="顶灯\nsdf"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        />
+    <TextView
+
+        android:id="@+id/tx_voice"
+        android:layout_width="0dip"
+        android:layout_weight="1"
+        android:layout_height="50dip"
+        android:gravity="center"
+        android:text="客厅"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:drawableRight="@drawable/arrow1"
+        android:layout_marginRight="15dip"
+        />
+
+</LinearLayout>

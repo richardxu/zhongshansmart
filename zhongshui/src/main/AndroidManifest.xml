@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.suntrans.zhongshui">
+<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+<uses-permission android:name="android.permission.RESTART_PACKAGES"/> 
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="16" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+        android:label="@string/app_name"
+         >
+        <!--android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen"-->
+         <!--   欢迎页 -->
+         <activity       
+            android:name="com.suntrans.zhongshui.Welcome_Activity"
+            android:screenOrientation="portrait"
+            android:icon="@drawable/ic_launcher"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            >
+            <intent-filter>      <!-- 下面两行设置初始activity -->
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+         </activity>
+        <!--  主页面 -->
+         <activity       
+            android:name="com.suntrans.zhongshui.Main_Activity"
+            android:screenOrientation="portrait"
+            android:label="主页面" >            
+       </activity>
+		<activity                 
+            android:name="com.suntrans.zhongshui.SwitchInfo_Activity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:label="参数查看" >            
+        </activity>
+        
+		<activity
+            android:name="com.suntrans.zhongshui.ControlInfo_Activity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:label="参数校正" >
+        </activity>
+
+        <activity
+            android:name="com.suntrans.zhongshui.VoiceConfig_Activity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:label="语音配置页面" >
+        </activity>
+
+        <activity
+            android:name="com.suntrans.zhongshui.Edit_Activity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:label="图片编辑" >
+        </activity>
+
+        <activity
+            android:name="com.suntrans.zhongshui.WarningConfig_Activity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:label="报警配置" >
+        </activity>
+
+        <activity
+            android:name="com.suntrans.zhongshui.ServerConfig_Activity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:label="端口配置" >
+        </activity>
+
+        <activity
+            android:name="com.suntrans.zhongshui.InfraredLearn_Activity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:label="红外学习" >
+        </activity>
+
+        <service
+            android:name="services.MainService">
+            <intent-filter>
+                <action android:name="com.suntrnas.beijing.main"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+
+
+    </application>
+
+</manifest>

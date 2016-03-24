@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="70dip"
+        android:layout_height="50dip"
+
+        android:textSize="18sp"
+        android:textColor="@color/blue"
+        android:id="@+id/tx_channel"
+        android:layout_gravity="center"
+        android:text="通道1"
+        android:gravity="center"/>
+</LinearLayout>

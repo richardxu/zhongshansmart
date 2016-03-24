@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+     <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:orientation="horizontal"
+        android:background="@color/bg_action"    
+        android:gravity="center">
+        <ImageView
+	        android:id="@+id/img_back"
+	        android:layout_width="wrap_content"
+	        android:layout_height="50dip"
+	        android:paddingTop="0dip"
+	        android:paddingBottom="0dip"
+	        android:layout_gravity="center"
+	        android:scaleType="fitCenter"
+	        android:paddingLeft="10dip"
+	        android:src="@drawable/ic_back_normal"
+	        />
+	    <TextView
+	        android:id="@+id/tx_title"
+	        android:layout_width="0dip"
+	        android:layout_weight="1"
+	        android:layout_height="50dip"
+	        android:gravity="center"
+	        android:textSize="24sp"      
+	        android:text="参数校正"        
+	        android:textColor="@color/white"
+	        android:singleLine="true"
+	        android:ellipsize="end"/>	        
+	    
+    </LinearLayout>
+    
+    <LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="50dip"
+		android:orientation="horizontal"		
+	    android:fillViewport="true">
+	    
+	    <TextView 
+	        android:layout_width="0dip"
+	        android:layout_height="50dip"
+	        android:layout_weight="1"
+	        android:text="参数"	       
+	        android:paddingLeft="15dip"
+	        android:textSize="19sp"
+	        android:textColor="@color/blue"
+	        android:gravity="center|left"/>
+	    <TextView
+	        android:layout_width="0dip"
+	        android:layout_height="50dip"
+	        android:layout_weight="1"
+	        android:text="系数k"        
+	        android:paddingLeft="15dip"
+	        android:textSize="19sp"
+	        android:textColor="@color/blue"	        
+	        android:gravity="center"/>
+	    <TextView
+	        android:layout_width="0dip"
+	        android:layout_height="50dip"
+	        android:layout_weight="1"
+	        android:text="系数b"
+	        android:paddingLeft="15dip"
+	        android:textSize="19sp"
+	        android:textColor="@color/blue"	        
+	        android:gravity="center"/>
+	
+	    <TextView
+	        android:layout_width="0dip"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:text="参数值"	        
+	        android:textColor="@color/blue"
+	        android:paddingRight="15dip"
+	        android:singleLine="true"
+	        android:ellipsize="end"
+	        android:textSize="19sp"
+	        android:gravity="center|right"/>     
+	   
+	</LinearLayout>
+	     
+     <com.handmark.pulltorefresh.library.PullToRefreshListView
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        
+	        android:id="@+id/list"
+	        android:fadingEdge="none"
+       		android:fastScrollEnabled="false"
+        	android:footerDividersEnabled="false"
+       		android:headerDividersEnabled="false"
+       		android:smoothScrollbar="true" 
+	        />
+	<!--<Button -->
+         <!--android:layout_width="fill_parent"-->
+         <!--android:layout_height="45dip"-->
+         <!--android:id="@+id/bt"-->
+         <!--android:text="更改配置"-->
+         <!--android:layout_marginTop="25dip"-->
+         <!--android:textColor="@color/white"-->
+         <!--android:background="@color/royalblue"-->
+         <!--android:textSize="23sp"-->
+         <!--/>-->
+</LinearLayout>

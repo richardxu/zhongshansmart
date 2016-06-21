@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="80dip"/>
+
+    <!--上下左右四个方向部分-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/layout_direction"
+        android:gravity="center">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:clickable="true"
+                android:layout_width="100dip"
+                android:layout_height="40dip"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:id="@+id/img_up"
+                android:background="@drawable/btn_up"/>
+            <ImageButton
+                android:clickable="true"
+                android:layout_width="40dip"
+                android:layout_height="100dip"
+                android:id="@+id/img_left"
+                android:layout_toLeftOf="@id/img_up"
+                android:layout_marginTop="29dip"
+                android:layout_marginRight="-12dip"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:background="@drawable/btn_left"/>
+            <ImageButton
+                android:clickable="true"
+                android:layout_width="40dip"
+                android:layout_height="100dip"
+                android:id="@+id/img_right"
+                android:layout_toRightOf="@id/img_up"
+                android:layout_marginTop="29dip"
+                android:layout_marginLeft="-12dip"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:background="@drawable/btn_right"/>
+            <ImageButton
+                android:clickable="true"
+                android:layout_width="100dip"
+                android:layout_height="40dip"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/img_left"
+                android:layout_marginTop="-11dip"
+                android:scaleType="fitXY"
+                android:id="@+id/img_down"
+                android:background="@drawable/btn_down"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

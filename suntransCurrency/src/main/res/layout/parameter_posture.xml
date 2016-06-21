@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dip"
+	android:orientation="horizontal"
+    android:fillViewport="true">
+    
+    <TextView 
+        android:layout_width="0dip"
+        android:layout_height="50dip"
+        android:layout_weight="1"
+        android:text="角度"
+        android:id="@+id/name"
+        android:paddingLeft="15dip"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:gravity="center|left"/>
+
+    <TextView
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="null"
+        android:id="@+id/value"
+        android:textColor="@color/blue"
+        android:paddingRight="15dip"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="17sp"
+        android:gravity="center|right"/>
+     
+   
+</LinearLayout>

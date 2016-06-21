@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>     
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">     
+ <!--  这个是定义的背景颜色，另一个seekbar_style1是定义的背景图片  -->
+   <item android:id="@android:id/background"
+            android:paddingTop="10px"
+         android:paddingBottom="10px">     
+      <shape>     
+         <corners android:radius="5dip" />     
+         <gradient   
+             android:startColor="#ffffffff" 
+             android:centerColor="#ff000000"    
+             android:endColor="#ff808A87"   
+             android:centerY="0.45"    
+             android:angle="270"/>     
+      </shape>     
+   </item>     
+       
+   <item android:id="@android:id/progress"
+            android:paddingTop="10px"
+         android:paddingBottom="10px" >     
+       <clip>     
+          <shape>     
+              <corners android:radius="5dip" />     
+              <gradient   
+                  android:startColor="#ffffffff" 
+                  android:centerColor="#ffFF0000"    
+                  android:endColor="#ffAA0000"   
+                  android:centerY="0.45"    
+                  android:angle="270"/>     
+          </shape>     
+       </clip>     
+   </item>     
+ </layer-list>
